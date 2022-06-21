@@ -15,7 +15,8 @@ export class VideocontainerComponent implements OnInit {
   }
 
   videosList: Videocard[] = [
-    new Videocard( "Funny cat", "https://pyxis.nymag.com/v1/imgs/431/405/f532d2de344840c6a151bc3a073a56af51-flowers.rsquare.w700.jpg", "Animals", "Animals Channel", "img/cat1.png",150, false),
+    new Videocard("Ces petits mots condescendants", "assets/pictures/thumbnails/humour2.png", "Humour", "France Inter", "assets/pictures/thumbnails/franceinter.png", 950, false),
+    new Videocard("L'art de la conversation", "assets/pictures/thumbnails/humour4.png", "Humour", "France Inter", "assets/pictures/thumbnails/franceinter.png", 690, true)
 
   ]
 
