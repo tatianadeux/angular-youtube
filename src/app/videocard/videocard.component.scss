@@ -3,7 +3,8 @@
 }
 
 .video-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 
 .video-card > div {
@@ -23,10 +24,19 @@
 
 .video-channel {
   font-size: 15px;
+  margin-bottom: 7px;
 }
+
 
 .video-text {
   font-size: 12px;
   font-weight: 300;
+}
+
+.video-direct {
+  background-color: red;
+  padding: 8px;
+  border-radius: 16px;
+
 }
 

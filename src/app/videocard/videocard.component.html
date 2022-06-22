@@ -7,8 +7,8 @@
       <p class="video-title">{{videocard.title}}</p>
       <p class="video-channel">{{videocard.channel}}</p>
       <ng-container *ngIf="videocard.isLive ; else noLive">
-        <span class="video-text">En direct • </span>
-        <span class="video-text">{{videocard.views}}k de spectateurs</span>
+        <span class="video-text">{{videocard.views}}k de spectateurs • </span>
+        <span class="video-text video-direct">En direct</span>
       </ng-container>
       <ng-template #noLive>
         <span class="video-text">{{videocard.views}}k de vues</span>
