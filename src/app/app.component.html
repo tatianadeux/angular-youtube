@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-videocontainer></app-videocontainer>
+<app-header (sendDataToParent)="onReceivedValue($event)"></app-header>
+<app-videocontainer [searchedValue]="searchedValueReceived"></app-videocontainer>

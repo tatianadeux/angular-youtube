@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Videocontainer } from '../models/videocontainer.model';
 import { Videocard } from '../models/videocard.model';
 
@@ -7,19 +7,16 @@ import { Videocard } from '../models/videocard.model';
   templateUrl: './videocontainer.component.html',
   styleUrls: ['./videocontainer.component.scss']
 })
-export class VideocontainerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class VideocontainerComponent implements OnInit, OnChanges {
+  @Input()
+  searchedValue: string = "";
 
   videosList: Videocard[] = [
     new Videocard("Ces petits mots condescendants", "assets/pictures/thumbnails/humour2.png", "Humour", "France Inter", "assets/pictures/thumbnails/franceinter.png", 950, false),
     new Videocard("L'art de la conversation", "assets/pictures/thumbnails/humour4.png", "Humour", "France Inter", "assets/pictures/thumbnails/franceinter.png", 690, true),
     new Videocard("J'ai 25 ans", "assets/pictures/thumbnails/humour.png", "Humour", "France Inter", "assets/pictures/thumbnails/franceinter.png", 700, false),
     new Videocard("Le marathon de Paris", "assets/pictures/thumbnails/humour3.png", "Humour", "France Inter", "assets/pictures/thumbnails/franceinter.png", 215, false),
-    /*new Videocard("beats to study to", "assets/pictures/thumbnails/lofi.png", "En direct", "Lofi Station", "assets/pictures/thumbnails/lofilogo.jpeg", 37, false),
+    new Videocard("beats to study to", "assets/pictures/thumbnails/lofi.png", "En direct", "Lofi Station", "assets/pictures/thumbnails/lofilogo.jpeg", 37, false),
     new Videocard("beats to sleep to", "assets/pictures/thumbnails/lofi2.png", "En direct", "Lofi Station", "assets/pictures/thumbnails/lofilogo.jpeg", 6, true),
     new Videocard("beats to relax to", "assets/pictures/thumbnails/lofi3.png", "En direct", "Lofi Station", "assets/pictures/thumbnails/lofilogo.jpeg", 25, true),
     new Videocard("beats to chill to", "assets/pictures/thumbnails/lofi4.png", "En direct", "Lofi Station", "assets/pictures/thumbnails/lofilogo.jpeg", 10, true),
@@ -30,9 +27,25 @@ export class VideocontainerComponent implements OnInit {
     new Videocard("The Mozart Collection", "assets/pictures/thumbnails/music.png", "Musique", "Music Station", "assets/pictures/thumbnails/musiclogo.png", 400, false),
     new Videocard("Viva la Vida | Coldplay", "assets/pictures/thumbnails/music2.png", "Musique", "Music Station", "assets/pictures/thumbnails/musiclogo.png", 900, false),
     new Videocard("Ignorance | Paramore", "assets/pictures/thumbnails/music3.png", "Musique", "Music Station", "assets/pictures/thumbnails/musiclogo.png", 260, false),
-    new Videocard("I'm with you | Avril Lavigne", "assets/pictures/thumbnails/music4.png", "Musique", "Music Station", "assets/pictures/thumbnails/musiclogo.png", 587,false)*/
+    new Videocard("I'm with you | Avril Lavigne", "assets/pictures/thumbnails/music4.png", "Musique", "Music Station", "assets/pictures/thumbnails/musiclogo.png", 587,false)
   ]
 
+  videosListFiltered: Videocard[] = this.videosList
 
+  constructor() { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.searchBar(this.searchedValue)
+  }
+
+  ngOnInit(): void {
+  }
+
+  searchBar(value: string) {
+    /* dans le tableau videosList, j'applique la méthode filter qui regarde si pour chaue vidéo,
+    le titre de la vidéo inclut la valeur recherchée. La méthode filter renvoie un nouveau tableau, à stocker dans une variable */
+    console.log(this.videosList.filter(video => video.title.includes(this.searchedValue)));
+    this.videosListFiltered = this.videosList.filter(video => video.title.toLocaleLowerCase().includes(this.searchedValue.toLocaleLowerCase()));
+  }
 }
+
