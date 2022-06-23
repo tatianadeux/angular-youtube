@@ -1,7 +1,8 @@
 #video-section {
   gap: 1em;
+  flex-wrap: wrap;
 }
 
 app-videocard {
-  width: 20%;
+  width: 22%;
 }

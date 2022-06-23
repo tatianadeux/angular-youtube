@@ -1,2 +1,7 @@
 <app-header (sendDataToParent)="onReceivedValue($event)"></app-header>
-<app-videocontainer [searchedValue]="searchedValueReceived"></app-videocontainer>
+<section class="flex">
+  <app-navigation></app-navigation>
+  <app-videocontainer [searchedValue]="searchedValueReceived"></app-videocontainer>
+</section>
+
+

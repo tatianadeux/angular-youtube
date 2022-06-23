@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { VideocontainerComponent } from './videocontainer/videocontainer.component';
 import { VideocardComponent } from './videocard/videocard.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     VideocontainerComponent,
-    VideocardComponent
+    VideocardComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

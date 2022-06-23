@@ -17,6 +17,10 @@ export class HeaderComponent implements OnInit {
     this.sendDataToParent.emit(this.searchedValue);
   }
 
+  alert(): void{
+    alert('Micro non détecté')
+  }
+
   constructor() { }
 
   ngOnInit(): void {

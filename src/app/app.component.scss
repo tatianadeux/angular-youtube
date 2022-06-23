@@ -1,3 +1,14 @@
 @import '../styles.scss';
 
+section {
+  justify-content: space-between;
+}
+app-navigation {
+  width: 20%;
+  border: 1px black solid;
+}
+
+app-videocontainer {
+  width: 75%;
+}
 
