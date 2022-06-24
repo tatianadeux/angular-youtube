@@ -8,6 +8,8 @@ import { Videocard } from '../models/videocard.model';
   styleUrls: ['./videocontainer.component.scss']
 })
 export class VideocontainerComponent implements OnInit, OnChanges {
+
+ /* header > app > videocontainer */
   @Input()
   searchedValue: string = "";
 

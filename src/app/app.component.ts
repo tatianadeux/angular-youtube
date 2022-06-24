@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  /* header > videocontainer */
+  /* header > app > videocontainer */
   searchedValueReceived: string = "";
 
   onReceivedValue(searchedValue: string){
     this.searchedValueReceived = searchedValue;
   }
 
-  /* category > videocontainer */
+  /* category > app > videocontainer */
 
 }

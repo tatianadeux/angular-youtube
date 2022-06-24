@@ -9,6 +9,7 @@ import { VideocontainerComponent } from './videocontainer/videocontainer.compone
 import { VideocardComponent } from './videocard/videocard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CategoryComponent } from './category/category.component';
+import { ChipComponent } from './category/chip/chip.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CategoryComponent } from './category/category.component';
     VideocardComponent,
     NavigationComponent,
     CategoryComponent,
+    ChipComponent,
   ],
   imports: [
     BrowserModule,

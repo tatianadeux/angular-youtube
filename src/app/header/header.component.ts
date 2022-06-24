@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  /* header > app > videocontainer */
   @Output()
   sendDataToParent: EventEmitter<string> = new EventEmitter();
 
@@ -20,6 +21,8 @@ export class HeaderComponent implements OnInit {
   alert(): void{
     alert('Micro non détecté')
   }
+
+
 
   constructor() { }
 
