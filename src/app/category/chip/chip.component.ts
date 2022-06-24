@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Chip } from 'src/app/models/chip.model';
+
 
 @Component({
   selector: 'app-chip',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChipComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
