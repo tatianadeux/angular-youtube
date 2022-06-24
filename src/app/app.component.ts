@@ -8,11 +8,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
+  /* header > videocontainer */
   searchedValueReceived: string = "";
 
   onReceivedValue(searchedValue: string){
     this.searchedValueReceived = searchedValue;
   }
 
-  title = 'angular-youtube';
+  /* category > videocontainer */
+
 }

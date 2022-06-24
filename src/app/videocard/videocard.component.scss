@@ -24,7 +24,7 @@
 
 .video-channel {
   font-size: 15px;
-  margin-bottom: 7px;
+  margin: 2px 0;
 }
 
 
@@ -34,9 +34,10 @@
 }
 
 .video-direct {
-  background-color: red;
-  padding: 8px;
+  background-color: rgb(200, 14, 14);
+  padding: 6px;
   border-radius: 16px;
-
+  color: white;
+  font-weight: 400;
 }
 

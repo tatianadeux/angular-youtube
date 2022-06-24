@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { VideocontainerComponent } from './videocontainer/videocontainer.component';
 import { VideocardComponent } from './videocard/videocard.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     HeaderComponent,
     VideocontainerComponent,
     VideocardComponent,
-    NavigationComponent
+    NavigationComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,
